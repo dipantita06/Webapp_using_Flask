@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/home-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Login</h1>
+            <span class="subheading">WELCOME</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content --> <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+    <a href="/dashboard"><button class="btn btn-primary">Dashboard</button></a>
+          <a href="/logout"><button class="btn btn-primary float-right">Log Out</button></a>
+          <hr>
+      <form name="sentMessage" id="editForm" action= "/edit/{{SL}}" method="post" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input type="text" class="form-control" placeholder="Title" id="title" name="title"required data-validation-required-message="Please enter title" value="{{post.tittle}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Body</label>
+              <textarea rows="5" class="form-control" placeholder="Content Here" id="body" name="body" required data-validation-required-message="Please enter a content." >{{post.body}}</textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Image File</label>
+              <input type="text" class="form-control" placeholder="Image file" id="img_file" name="img_file" required data-validation-required-message="Please enter image name." >
+              <p class="help-block text-danger">{{post.img_file}}</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Your name" id="name" name="name" required data-validation-required-message="Please enter name." value="{{post.name}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Slug</label>
+              <input type="text" class="form-control" placeholder="Slug Name" id="slug" name="slug" required data-validation-required-message="Please enter content." value="{{post.slug}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          
+          
+          
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+        </form></div>
+      </div>
+    </div>
+        
+        <!-- Pager -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

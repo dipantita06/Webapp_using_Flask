@@ -1,0 +1,19 @@
+{
+  "params":
+  {
+    "local_server":  "True",
+    "blog_name": "Blog Name",
+    "local_uri": "mysql://root:@localhost/beauty",
+    "prod_uri": "mysql://root:@localhost/beauty",
+    "git_url": "https://github.com",
+    "fb_url": "https://facebook.com",
+    "tw_url": "https://twitter.com",
+    "g_user": "example123@gmail.com",
+    "g_pass": "example123",
+    "about_me": "About Me",
+    "no_post": "2",
+    "admin_user": "admin12",
+    "admin_passward": "admin12",
+    "upload_file": "path"
+  }
+}
